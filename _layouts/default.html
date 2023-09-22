@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html class="no-js" lang="{{ site.lang | default: "en-US" }}">
+  {% include head.html %}
+  <body data-spy="scroll" data-target="#navmenu" data-offset="70">
+  
+      {% include navbar.html %}
+      {{ content }}
+      {% include footer.html %}
+    
+   
+      <a data-scroll href="#header" id="scroll-to-top"><i class="arrow_carrot-up"></i></a>
+	
+      <!-- jQuery Lib -->
+      <script src="{{site.baseurl}}/assets/js/vendor/jquery-1.12.4.min.js"></script>
+      <!-- Tether JS -->
+      <script src="{{site.baseurl}}/assets/js/vendor/tether.min.js"></script>
+      <!-- Bootstrap JS -->
+      <script src="{{site.baseurl}}/assets/js/vendor/bootstrap.min.js"></script>
+      <!-- Slicknav JS -->
+      <script src="{{site.baseurl}}/assets/js/vendor/jquery.slicknav.min.js"></script>
+      <!-- OWL-Carousel JS -->
+      <script src="{{site.baseurl}}/assets/js/vendor/owl.carousel.min.js"></script>
+      <!-- Swiper JS -->
+      <script src="{{site.baseurl}}/assets/js/vendor/swiper.min.js"></script>
+      <!-- Smooth Scroll JS -->
+      <script src="{{site.baseurl}}/assets/js/vendor/smooth-scroll.min.js"></script>
+      <!-- Ajaxchimp JS -->
+      <script src="{{site.baseurl}}/assets/js/vendor/jquery.ajaxchimp.min.js"></script>
+      <!-- Wow JS -->
+      <script src="{{site.baseurl}}/assets/js/vendor/wow.min.js"></script>
+      <!-- Main JS -->
+      <script src="{{site.baseurl}}/assets/js/main.js"></script>
+
+  </body>
+</html>
