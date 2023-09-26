@@ -122,7 +122,7 @@
   if ($(".subscribe-form").length > 0) {
     /*  MAILCHIMP  */
     $(".subscribe-form").ajaxChimp({
-      language: "es",
+      language: "en",
       callback: mailchimpCallback,
       url: "//IconicThemes.us14.list-manage.com/subscribe/post?u=48e55a88ece7641124b31a029&amp;id=361ec5b369",
     });
