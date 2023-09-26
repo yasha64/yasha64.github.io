@@ -441,10 +441,10 @@ button {
   padding: 10px 0;
 }
 .navbar-fixed-top.header-section {
-  background-color: #fff;
+  background-color: #e5eff2;
   box-shadow: 0px 16px 28px 0px rgba(0, 0, 0, 0.05);
   height: 70px;
-  border-bottom: 0;
+  border-bottom: solid 1px #d89116;
   padding: 0;
 }
 
@@ -473,6 +473,10 @@ button {
   margin: 0;
   position: relative;
   padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
 }
 .navbar-header {
   padding: 17px 0;
@@ -511,14 +515,14 @@ ul.nav {
 ul.nav > li {
 }
 ul.nav > li > a {
-  color: rgba(255, 255, 255, 0.9);
+  color: #ff0844;
   font-family: "Poppins", sans-serif;
   display: inline-block;
   vertical-align: middle;
   padding: 0 10px;
   letter-spacing: 1px;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 700;
   text-transform: capitalize;
   line-height: 70px;
   z-index: 1;
@@ -543,17 +547,17 @@ ul.nav > li > a.active {
   background: none;
   padding: 4px 0;
   display: none;
-  width: 100%;
+  /* width: 100%;
   position: absolute;
   right: 0;
-  top: 0;
+  top: 0; */
 }
 .slicknav_nav {
   background-color: #fff;
 }
 .slicknav_btn {
   background-color: transparent;
-  margin: 17px 5px 19px;
+  /* margin: 17px 5px 19px; */
 }
 .slicknav_nav .slicknav_row:hover,
 .slicknav_nav .slicknav_row,
