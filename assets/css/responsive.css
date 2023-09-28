@@ -161,7 +161,12 @@
   .feature-list .feature-content:last-child {
     margin-bottom: 0;
   }
-  /* .hero-content p{ font-size: 12px; } */
+  .hero-content p {
+    font-size: 18px;
+  }
+  .hero-content h1 {
+    padding-top: 120px;
+  }
   .subscribe-form {
     width: 100%;
   }
