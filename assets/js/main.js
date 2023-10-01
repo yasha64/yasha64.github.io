@@ -26,6 +26,102 @@
   });
 
   /*=========================================================================
+    Review Carousel
+=========================================================================*/
+
+  // $("#review-carousel").owlCarousel({
+  //   loop: true,
+  //   margin: 15,
+  //   autoplay: true,
+  //   smartSpeed: 500,
+  //   items: 1,
+  //   nav: false,
+  //   dots: true,
+  //   responsive: {
+  //     0: {
+  //       items: 1,
+  //     },
+  //     480: {
+  //       items: 1,
+  //     },
+  //     768: {
+  //       items: 2,
+  //     },
+  //     992: {
+  //       items: 2,
+  //     },
+  //   },
+  // });
+
+  $(function () {
+    $.get("http://localhost:8800/api/feedback/published-list", function (data) {
+      createTable(data.data);
+    });
+  });
+
+  function createTable(data) {
+    var html = "";
+    $(".owl-carousel").trigger("destroy.owl.carousel");
+    $(".owl-carousel").find(".owl-stage-outer").children().unwrap();
+    $(".owl-carousel").removeClass("owl-center owl-loaded owl-text-select-on");
+
+    data.forEach((e) => {
+      html += createTableRow(e);
+    });
+
+    $(".owl-carousel").html(html);
+    $(".owl-carousel").owlCarousel({
+      loop: true,
+      margin: 15,
+      autoplay: true,
+      smartSpeed: 500,
+      items: 1,
+      nav: false,
+      dots: true,
+      responsive: {
+        0: {
+          items: 1,
+        },
+        480: {
+          items: 1,
+        },
+        768: {
+          items: 2,
+        },
+        992: {
+          items: 2,
+        },
+      },
+    });
+  }
+
+  // adding content to the DOM
+  function createTableRow(result) {
+    return `
+     <div class="review-item">
+        <div class="review-thumb">
+          <img src=${result["photo"].image} alt="thumb" />
+        </div>
+        <div class="review-content">
+          <h3>${result.name}</h3>
+          <ul class="rattings">
+            <li><i class="fa fa-star"></i></li>
+            <li><i class="fa fa-star"></i></li>
+            <li><i class="fa fa-star"></i></li>
+            <li><i class="fa fa-star"></i></li>
+            <li><i class="fa fa-star"></i></li>
+          </ul>
+          <div class="review-text">
+            <p>
+            ${result.message}
+            </p>
+          </div>
+        </div>
+     
+      </div>`;
+  }
+
+  /*=========================================================================
     Mobile Menu
 =========================================================================*/
   // $('.menu-wrap ul.nav').slicknav({
@@ -33,33 +129,6 @@
   //     label: '',
   //     allowParentLinks: true
   // });
-
-  /*=========================================================================
-    Review Carousel
-=========================================================================*/
-  $("#review-carousel").owlCarousel({
-    loop: true,
-    margin: 15,
-    autoplay: true,
-    smartSpeed: 500,
-    items: 1,
-    nav: false,
-    dots: true,
-    responsive: {
-      0: {
-        items: 1,
-      },
-      480: {
-        items: 1,
-      },
-      768: {
-        items: 2,
-      },
-      992: {
-        items: 2,
-      },
-    },
-  });
 
   /*=========================================================================
     Screenshot Carousel
@@ -120,15 +189,15 @@
 	MAILCHIMP
 =========================================================================*/
   if ($(".subscribe-form").length > 0) {
-    /*  MAILCHIMP  */
     $(".subscribe-form").ajaxChimp({
-      language: "en",
+      language: "es",
       callback: mailchimpCallback,
-      url: "//IconicThemes.us14.list-manage.com/subscribe/post?u=48e55a88ece7641124b31a029&amp;id=361ec5b369",
+      url: "https://github.us21.list-manage.com/subscribe/post?u=1a89f98df37a15c8d9cd4ecd3&amp;id=48124d0574&amp;f_id=0099dce6f0",
     });
   }
 
   function mailchimpCallback(resp) {
+    console.log(resp.msg);
     if (resp.result === "success") {
       $("#subscribe-result").addClass("subs-result");
       $(".subscription-success").text(resp.msg).fadeIn();
