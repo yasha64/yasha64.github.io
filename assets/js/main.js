@@ -55,7 +55,7 @@
 
   $(function () {
     $.get(
-      "http://185.46.11.105:8800/api/feedback/published-list",
+      "https://api.yasha64.ru/api/feedback/published-list",
       function (data) {
         createTable(data.data);
       }
