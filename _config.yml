@@ -1,23 +1,9 @@
 title: "Yasha"
-description: Full Stack Developer, Software Testing, Quality Analyst, Data Analyst, Blogger, Traveller, Yogi
+description:  Выиграйте захватывающие призы , Купите продукт И выиграйте монеты
 permalink: ":title/"
 baseurl: "" # the subpath of your site, e.g. /blog
-#url: "http://localhost:4000" # the base hostname & protocol for your site, e.g. http://example.com
-url: ""
-site-twitter: #if your site has a twitter account, enter it here
-
-# Author Settings
-author: Rajnish Kumar # add your name
-author-img: profile.png # add your photo
-about-author: Full Stack Developer - Software Test Automation - Data Analyst - Blogger  - Traveller - Yogi # add description
-social-twitter: # add your Twitter handle
-social-facebook: rajneesh.anand.986 # add your Facebook handle
-social-github: rajneesh-anand # add your Github handle
-social-linkedin: rajneesh-anand# add your Linkedin handle
-social-email: # add your Email address
-resume: https://rajneesh-anand.github.io/portfolio/resume.pdf
-# Disqus
-# discus-identifier: mr-brown # add your discus identifier
+url: "https://yasha64.ru" # the base hostname & protocol for your site, e.g. http://example.com
+# url: ""
 
 # Tracker
 analytics: Google Analytics
@@ -35,4 +21,4 @@ sass:
   sass_dir: _sass
   sourcemap: never
 
-exclude: ["node_modules", "gulpfile.js", "package.json", "yarn.lock"]
+exclude: ["node_modules", "package.json", "yarn.lock"]
