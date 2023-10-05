@@ -98,4 +98,17 @@
   </script>
 
   <script src="{{site.baseurl}}/assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+
+  <script
+    src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js"
+    defer
+  ></script>
+  <script>
+    window.OneSignalDeferred = window.OneSignalDeferred || [];
+    OneSignalDeferred.push(function (OneSignal) {
+      OneSignal.init({
+        appId: "3d63dc19-9ffa-4452-ab68-aa3ded843b34",
+      });
+    });
+  </script>
 </head>
